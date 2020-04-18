@@ -5,7 +5,7 @@
 // So that rollup can tree-shake them if necessary.
 export function makeMap(
   str: string,
-  expectsLowerCase: boolean
+  expectsLowerCase?: boolean
 ): (val: string) => boolean {
   const map: Record<string, boolean> = Object.create(null)
   const list: Array<string> = str.split(',')
